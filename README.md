@@ -13,4 +13,4 @@ Created with HTML, CSS using flexbox for the layout of the website
 
 # Author
 
--   Linkedin - [Martha Mendoza](https://linkedin.com/in/ishaankamra)
+-   Linkedin - [Ishaan Kamra](https://linkedin.com/in/ishaankamra)
