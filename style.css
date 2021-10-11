@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap");
+@import url("https://fonts.google.com/specimen/Red+Hat+Display");
 
 :root {
     --pale_blue: hsl(225, 100%, 94%);
@@ -11,16 +11,23 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: "Red Hat Display", sans-serif;
-    font-size: 16px;
+    font-family: "Red Hat Display";
+    font-size: 1rem;
     font-weight: 500;
     background-image: url("./images/pattern-background-desktop.svg");
     background-color: var(--pale_blue);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: repeat-x;
+    height: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        background-image: url("./images/pattern-background-mobile.svg");
+    }
 }
 
 body > h1,
@@ -35,6 +42,121 @@ h6 {
     font-weight: 700;
 }
 
+body .card {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    margin: auto;
+    margin-top: 5rem;
+    max-width: calc(400px - 1vw);
+    background-color: white;
+    border-radius: 1.5rem;
+    justify-content: space-between;
+    box-shadow: 0.2rem 0.5rem 1.5rem rgba(51, 51, 51, 0.5);
+}
+
+@media only screen and (max-width: 768px) {
+    .temp {
+        padding: 1rem;
+    }
+}
+
+.card > * {
+    margin-bottom: 1rem;
+}
+
+.card__image > img {
+    max-width: 100%;
+    height: auto;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+}
+
+.card__title {
+    margin-top: 2rem;
+    text-align: center;
+    color: var(--dark_blue);
+}
+
+.card__description {
+    text-align: center;
+    margin: 0 2rem 1rem 2rem;
+    color: var(--desaturated_blue);
+}
+
+.card__planSelection {
+    margin: 2rem 2.3rem 0 2.3rem;
+    background-color: var(--very_pale_blue);
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.planContent {
+    line-height: 1.5rem;
+}
+
+.planHeader {
+    color: var(--dark_blue);
+}
+
+.planCost {
+    color: var(--desaturated_blue);
+}
+
+.change {
+    color: var(--bright_blue);
+}
+
+.change:hover {
+    color: #766bea;
+}
+
+.card__paymentButton {
+    display: block;
+    padding: 1rem 6rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: hsl(245, 75%, 52%);
+    color: white;
+}
+
+.card__paymentButton:hover {
+    background-color: #766bea;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 400px) {
+    .card__paymentButton {
+        padding: 1rem 4rem;
+    }
+}
+
+.card__cancel {
+    text-align: center;
+    margin: 2rem 0 1rem 0;
+    font-weight: 700;
+    color: var(--desaturated_blue);
+}
+
+.card__cancel:hover {
+    color: var(--dark_blue);
+}
+
 .attribution {
-    font-size: 12px;
+    font-size: 11px;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
 }
