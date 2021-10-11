@@ -5,7 +5,7 @@ Solution challenge [Order summary component frontend mentor](https://www.fronten
 
 # Link
 
-Solution: [Github Page](https://order-summary-ishaan1091.netlify.app/)
+Solution: [Click Here](https://order-summary-ishaan1091.netlify.app/)
 
 # Description
 
